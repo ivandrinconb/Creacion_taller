@@ -2,10 +2,15 @@ package co.edu.uniquindio.taller.tallerapp.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.edu.uniquindio.taller.tallerapp.model.Cliente;
+import co.edu.uniquindio.taller.tallerapp.model.TipoBicicleta;
+import co.edu.uniquindio.taller.tallerapp.repository.DataStore;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+
 
 public class ClienteController {
 
@@ -31,19 +36,59 @@ public class ClienteController {
     private TextField txtTelefono;
 
     @FXML
+    private ChoiceBox<TipoBicicleta> chTipoBicicleta;
+
+    @FXML
+    private TableView<Cliente> tableCliente;
+
+    @FXML
+    private TableColumn<Cliente, String> tcDireccion;
+
+    @FXML
+    private TableColumn<Cliente, String> tcIdentificacion;
+
+    @FXML
+    private TableColumn<Cliente, String> tcNombre;
+
+    @FXML
+    private TableColumn<Cliente, String> tcTelefono;
+
+    @FXML
+    private TableColumn<Cliente, String> tcTipoBicicleta;
+
+
+    @FXML
     void onGuardarCliente(ActionEvent event) {
+
 
     }
 
     @FXML
     void initialize() {
-        assert btnGuardar != null : "fx:id=\"btnGuardar\" was not injected: check your FXML file 'ClienteView.fxml'.";
-        assert txtDireccion != null : "fx:id=\"txtDireccion\" was not injected: check your FXML file 'ClienteView.fxml'.";
-        assert txtIdentificacion != null : "fx:id=\"txtIdentificacion\" was not injected: check your FXML file 'ClienteView.fxml'.";
-        assert txtNombre != null : "fx:id=\"txtNombre\" was not injected: check your FXML file 'ClienteView.fxml'.";
-        assert txtTelefono != null : "fx:id=\"txtTelefono\" was not injected: check your FXML file 'ClienteView.fxml'.";
+
 
     }
 
+    private void guardarCliente() {
+        String nombre = txtNombre.getText();
+        String identificacion = txtIdentificacion.getText();
+        String telefono = txtTelefono.getText();
+        String direccion = txtDireccion.getText();
+
+        TipoBicicleta tipoSeleccionado = chTipoBicicleta.getValue();
+        String tipoBicicletaStr = tipoSeleccionado != null ? tipoSeleccionado.name() : null;
+
+        if (nombre.isEmpty() || identificacion.isEmpty() || telefono.isEmpty() || direccion.isEmpty()) {
+            alerta(Alert.AlertType.WARNING, "Campos incompletos", "Por favor llena todos los campos.");
+            return;
+    }
+
+        private void alerta(Alert.AlertType type, String titulo, String msg) {
+            Alert a = new Alert(type);
+            a.setTitle(titulo);
+            a.setHeaderText(null);
+            a.setContentText(msg);
+            a.showAndWait();
+        }
 }
 

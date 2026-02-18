@@ -1,6 +1,7 @@
 package co.edu.uniquindio.taller.tallerapp.model;
 
 public class Cliente {
+    private TipoBicicleta tipoBicicleta;
     private String nombre;
     private String identificacion;
     private String telefono;
@@ -14,6 +15,13 @@ public class Cliente {
         this.identificacion = identificacion;
         this.telefono = telefono;
         this.direccion = direccion;
+    }
+
+    public TipoBicicleta getTipoBicicleta() {
+        return tipoBicicleta;
+    }
+    public void setTipoBicicleta(TipoBicicleta tipoBicicleta) {
+        this.tipoBicicleta = tipoBicicleta;
     }
     public String getNombre() {
         return nombre;
