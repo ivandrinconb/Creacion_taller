@@ -5,6 +5,7 @@ public class Bicicleta {
     private String marca;
     private String serial;
     private int modelo;
+    private String cliente;
 
     public Bicicleta() {}
 
@@ -39,6 +40,23 @@ public class Bicicleta {
     }
     public void setModelo(int modelo) {
         this.modelo = modelo;
+    }
+    public String getCliente() {
+        return cliente;
+    }
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    @Override
+    public String toString() {
+        return "Bicicleta=" +'\n'+
+                "color='" + color + '\n' +
+                "marca='" + marca  + '\n'+
+                "serial='" + serial  +'\n'+
+                "modelo=" + modelo + '\n'+
+                "cliente='" + cliente  + '\n';
+
     }
 }
 

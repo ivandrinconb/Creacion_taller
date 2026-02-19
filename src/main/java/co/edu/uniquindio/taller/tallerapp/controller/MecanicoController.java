@@ -1,4 +1,4 @@
 package co.edu.uniquindio.taller.tallerapp.controller;
 
-public class MainController {
+public class MecanicoController {
 }
