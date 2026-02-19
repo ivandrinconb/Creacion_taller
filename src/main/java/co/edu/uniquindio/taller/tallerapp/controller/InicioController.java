@@ -111,6 +111,27 @@ public class InicioController {
 
     @FXML
     void RegistroOrden(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/co/edu/uniquindio/taller/tallerapp/OrdenesView.fxml")
+            );
+            Parent root = loader.load();
+
+
+            Stage stage = new Stage();
+            stage.setTitle("Registro de Ordenes");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("No se pudo abrir la ventana de Ordenes.");
+            alert.showAndWait();
+        }
 
     }
 

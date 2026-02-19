@@ -31,4 +31,12 @@ public class Mecanico {
         this.codigoInterno = codigoInterno;
     }
 
+    @Override
+    public String toString() {
+        return "Mecanico=" + '\n' +
+                "nombre=" + nombre  + '\n' +
+                "especialidad=" + especialidad  + '\n' +
+                "codigoInterno=" + codigoInterno;
+
+    }
 }
