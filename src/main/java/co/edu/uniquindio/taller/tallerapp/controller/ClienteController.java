@@ -73,6 +73,8 @@ public class ClienteController {
     @FXML
     void initialize() {
 
+        Cliente cliente = new Cliente();
+
         chTipoBicicleta.setItems(FXCollections.observableArrayList(TipoBicicleta.values()));
         chTipoBicicleta.setValue(TipoBicicleta.MTB);
         tcNombre.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getNombre()));

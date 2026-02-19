@@ -1,11 +1,12 @@
 package co.edu.uniquindio.taller.tallerapp.model;
 
 public class Cliente {
-    private TipoBicicleta tipoBicicleta;
+
     private String nombre;
     private String identificacion;
     private String telefono;
     private String direccion;
+    private TipoBicicleta tipoBicicleta;
 
     public Cliente() {}
 
@@ -49,4 +50,14 @@ public class Cliente {
         this.direccion = direccion;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", identificacion='" + identificacion + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", tipoBicicleta=" + tipoBicicleta +
+                '}';
+    }
 }
