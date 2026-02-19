@@ -10,11 +10,12 @@ public class Cliente {
     public Cliente() {}
 
 
-    public Cliente(String nombre, String identificacion, String telefono, String direccion) {
+    public Cliente(String nombre, String identificacion, String telefono, String direccion, TipoBicicleta tipoBicicleta) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.tipoBicicleta = tipoBicicleta;
     }
 
     public TipoBicicleta getTipoBicicleta() {
