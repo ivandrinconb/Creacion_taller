@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="704.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.taller.tallerapp.controller.BicicletaController">
    <children>
       <TextField fx:id="txtColor" layoutX="144.0" layoutY="85.0" prefHeight="26.0" prefWidth="201.0" />
